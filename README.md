@@ -1,7 +1,7 @@
 # notificationJS
-1º You need to import jQuery. You can do it [here](https://code.jquery.com/jquery-3.3.1.min.js) 
-2º Import JS script
-3º You can try with:
+1º You need to import jQuery. You can do it [here](https://code.jquery.com/jquery-3.3.1.min.js) <br />
+2º Import JS script <br />
+3º You can try with: <br />
 ```
   newNotification({
     "title":"NotificationJS test!"
