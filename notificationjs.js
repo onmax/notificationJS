@@ -9,7 +9,7 @@ checkErrors = function (notification){
     }
 
     if(notification.title == undefined){
-        notification.status = 'TITLE UNDEFINED'
+        notification.title = 'TITLE UNDEFINED'
         console.error("NotificationJS: You need to set a title.")
     }
 
