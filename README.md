@@ -1,10 +1,9 @@
 # notificationJS
-1º You need to import jQuery. You can do it [here](https://code.jquery.com/jquery-3.3.1.min.js) <br />
-2º Import JS script <br /> 
+1º Import JS script <br /> 
 ```
 <script src="https://cdn.jsdelivr.net/gh/onmax/notificationJS/notificationJS.min.js"></script>
 ```
-3º You can try with: <br />
+2º You can try with: <br />
 ```
   newNotification({
     "title":"NotificationJS test!"
