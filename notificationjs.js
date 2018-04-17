@@ -29,6 +29,19 @@ checkErrors = function (notification){
     return notification
 
 }
+notficationJS_getDefaultsStyle = function(){
+    return {
+        "maxWidth":"375px",
+        "backgroundColor":"#F1F5F6",
+        "color":"#242424",
+        "border":"none",
+        "padding":"10px 15px",
+        "borderRadius":"5px",
+        "boxShadow":"0px 1px 9px 4px #242424;",
+        "marginTop":"15px",
+        "width":"calc(100vw - 80px)"
+    }
+}
 notficationJS_getDefaults = function(){
     return {                   
         "status":"info",   
@@ -37,22 +50,33 @@ notficationJS_getDefaults = function(){
         "animation_duration":0.2,                                   
         "showCloseIcon": true,                                     
         "newestOnTop": true,                                       
-        "debug": true                                               
+        "debug": true                                    
     }
 }
-newNotification = function(notification){
-    if(!notification){
+newNotification = function(notification_user){
+    if(!notification_user){
         console.error("NotificationJS: You need to set a map with at least a title property like this: ")
         console.error("NotificationJS: newNotification({\"title\":\"Your title goes here.\"})")
         return 0
     }
-    console.log(2)
-    checkErrors(notification)
-    notification = $.extend({},notficationJS_getDefaults(),notification)
-    console.log(notification)
+    checkErrors(notification_user)
+    
+    let notificationStyle = $.extend({},notficationJS_getDefaultsStyle(),notification_user.style)
+    let notification = $.extend({},notficationJS_getDefaults(),notification_user)
+    console.log(notificationStyle)
     let div_father = $(`<div class="notification-panel__item notification__${notification.status}"></div>`)
 
-    
+    div_father.css({
+        "maxWidth":notificationStyle.width,
+        "backgroundColor":notificationStyle.backgroundColor,
+        "color":notificationStyle.color,
+        "border":notificationStyle.border,
+        "padding":notificationStyle.padding,
+        "borderRadius":notificationStyle.borderRadius,
+        "boxShadow":notificationStyle.boxShadow,
+        "marginTop":notificationStyle.marginTop
+    })
+
     //left part
     let div_left = $('<div class="notification-left"></div>')
     let div_title = $(`<div class="notification__title">${notification.title}</div>`)

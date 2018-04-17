@@ -5,17 +5,9 @@
 }
 
 .notification-panel__item{
-    border-radius: 5px;
-    padding: 10px 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 15px;
-    box-shadow: 0px 1px 9px 4px #242424;
-    background: #F1F5F6;
-    max-width: 375px;
-    min-width: calc(100vw - 80px);
-    color: #242424;
 }
 .notification__ok{
     border-top:5px solid #27ae60;
