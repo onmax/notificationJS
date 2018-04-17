@@ -43,3 +43,8 @@ Values: [ true | false ]
 Do you want to see logs, errors, info in the console of the browser? <br />
 Values: [ true | false ]
 
+
+
+##DEMO
+[https://onmax.github.io/notificationJS/](https://onmax.github.io/notificationJS/)
+
