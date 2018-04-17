@@ -1,12 +1,11 @@
-function init(){
+(function(){
     if (!window.jQuery) {
         var jQuery = document.createElement('script');
         jQuery.src = "https://code.jquery.com/jquery-latest.min.js";
         document.head.appendChild(jQuery);
     }
-}
+})()
 
-window.onload = init();
 
 checkErrors = function (notification){
     if(!notification.debug)
