@@ -45,6 +45,6 @@ Values: [ true | false ]
 
 
 
-##DEMO
+## DEMO
 [https://onmax.github.io/notificationJS/](https://onmax.github.io/notificationJS/)
 
