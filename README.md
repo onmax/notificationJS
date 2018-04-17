@@ -48,7 +48,7 @@ Do you want to see logs, errors, info in the console of the browser? <br />
 Values: [ true | false ]
 
 ### Styles
-All options below are optional, and you can apply CSS values. If it a color, you can write: HSV,rgb or hexadecimal code. Or if it distances, you can use: px,em,rem,%... <br />
+All options below are optional, and you can apply CSS values. If it is a color, you can write: HSV,rgb or hexadecimal code. Or if it is distances, you can use: px,em,rem,%... <br />
 You may also apply your CSS variables if you have declared it in the root selector.<br />
 In the example below, CSS values are the defaults ones.
 
