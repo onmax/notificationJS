@@ -66,7 +66,8 @@ newNotification = function(notification_user){
     let div_father = $(`<div class="notification-panel__item notification__${notification.status}"></div>`)
 
     div_father.css({
-        "maxWidth":notificationStyle.width,
+        "maxWidth":notificationStyle.maxWidth,
+        "width":notificationStyle.width,
         "backgroundColor":notificationStyle.backgroundColor,
         "color":notificationStyle.color,
         "border":notificationStyle.border,
