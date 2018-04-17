@@ -15,7 +15,6 @@
     background: #F1F5F6;
     width: 375px;
     color: #242424;
-    transition: .2s all ease;
 }
 .notification__ok{
     border-top:5px solid #27ae60;

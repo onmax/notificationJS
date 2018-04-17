@@ -11,11 +11,6 @@ checkErrors = function (notification){
         document.getElementsByTagName('body')[0].appendChild(jQuery);
         return 0
     }
-
-    if(!notification.status){
-        notification.status = 'info'
-    }
-
     if(!notification.title){
         notification.title = 'TITLE UNDEFINED'
         if(notification.debug){
@@ -29,25 +24,21 @@ checkErrors = function (notification){
                 console.error("NotificationJS: You need to set a link with href property")
             }
     }
-    if(!notification.time)
-        notification.time = 5
-
-    if(!notification.animation_duration)
-        notification.animation_duration = 0.2
-
-    if(!notification.canClose)
-        notification.canClose = true
     
-    if(notification.hide == undefined)
-        notification.hide = true
-
-    if(notification.newestOnTop == undefined){
-        notification.newestOnTop = true
-        console.log("sad")
-    }
     
     return notification
 
+}
+notficationJS_getDefaults = function(){
+    return {                   
+        "status":"info",   
+        "time":5,                                                 
+        "hide":true,                                                
+        "animation_duration":0.2,                                   
+        "showCloseIcon": true,                                     
+        "newestOnTop": true,                                       
+        "debug": true                                               
+    }
 }
 newNotification = function(notification){
     if(!notification){
@@ -55,7 +46,10 @@ newNotification = function(notification){
         console.error("NotificationJS: newNotification({\"title\":\"Your title goes here.\"})")
         return 0
     }
-    notification = checkErrors(notification)
+    console.log(2)
+    checkErrors(notification)
+    notification = $.extend({},notficationJS_getDefaults(),notification)
+    console.log(notification)
     let div_father = $(`<div class="notification-panel__item notification__${notification.status}"></div>`)
 
     
@@ -95,7 +89,7 @@ newNotification = function(notification){
     div_father.append(div_left)
 
     //right part
-    if(notification.canClose){
+    if(notification.showCloseIcon){
         let div_right = $('<div class="notification-right"></div>')
         let close_icon = $('<img class="notification_icon" src="examples/close.svg" alt="Close"/>')
         close_icon.click(function(){
