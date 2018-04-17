@@ -1,6 +1,10 @@
 checkErrors = function (notification){
     if (!window.jQuery) {
-        console.error("NotificationJS: needs jQuery in order to work. You can import it here: https://code.jquery.com/jquery-3.3.1.min.js")
+        console.info("NotificationJS: needs jQuery in order to work. It has been automatic loaded.")
+        console.info("You can import it here: https://code.jquery.com/jquery-3.3.1.min.js")
+        var jQuery = document.createElement('script');
+        jQuery.src = "https://code.jquery.com/jquery-3.3.1.min.js";
+        document.getElementsByTagName('head')[0].appendChild(script);
         return 0
     }
 
