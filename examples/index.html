@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NotificationJS example</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: #242424;
+        width: 100%;
+        height: 100%;
+        color: #f39c12;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    h1,.buttons{
+        max-width: 800px;
+        margin: 25px auto;
+    }
+    .buttons{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .buttons button{
+        margin-right: 50px;
+        background: #c0c0c0;
+        border:none;
+        color: #111;
+        padding: 10px 15px;
+        border-radius:4px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    </style>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Example of NotificationJS</h1>
+    <div class="buttons">
+        <button onClick="showInfoNotification()" class="info">INFO</button>
+        <button onClick="showOkNotification()" class="ok">OK</button>
+        <button onClick="showErrorNotification()" class="error">ERROR</button>
+    </div>
+    <section class="notification-panel"></section>
+    
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="../notificationjs.js"></script>
+    <script>
+        showInfoNotification = function(){
+            newNotification({
+                "title":"This is just info",                     
+                "status":["info"],                        
+                "description":"Small description about the notification"
+            })
+        }
+        showOkNotification = function(){
+            newNotification({
+                "title":"Everything is OK!!!",                     
+                "status":["ok"],                        
+                "description":"NotificationJS is aweseme"
+            })
+        }
+        showErrorNotification = function(){
+            newNotification({
+                "title":"Oh no :(",                     
+                "status":["error"],                        
+                "description":"Something went wrong"
+            })
+        }
+    </script>
+</body>
+</html>

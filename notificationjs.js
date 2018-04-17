@@ -1,10 +1,10 @@
 checkErrors = function (notification){
     if (!window.jQuery) {
         console.info("NotificationJS: needs jQuery in order to work. It has been automatic loaded.")
-        console.info("You can import it here: https://code.jquery.com/jquery-3.3.1.min.js")
+        console.info("You can import it here: http://code.jquery.com/jquery-latest.min.js")
         var jQuery = document.createElement('script');
-        jQuery.src = "https://code.jquery.com/jquery-3.3.1.min.js";
-        document.getElementsByTagName('head')[0].appendChild(script);
+        jQuery.src = "http://code.jquery.com/jquery-latest.min.js";
+        document.getElementsByTagName('body')[0].appendChild(jQuery);
         return 0
     }
 
@@ -82,7 +82,7 @@ newNotification = function(notification){
     //right part
     if(notification.canClose){
         let div_right = $('<div class="notification-right"></div>')
-        let close_icon = $('<img class="icon" src="icons/close-dark.svg" alt="Cerrar notificación"/>')
+        let close_icon = $('<img class="icon" src="close-dark.svg" alt="Close"/>')
         close_icon.click(function(){
             div_father.fadeOut(anim_t)
             setTimeout(function(){
