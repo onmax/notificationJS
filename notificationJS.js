@@ -28,7 +28,6 @@ checkErrors = function(notification) {
     return notification
 
 }
-<<<<<<< HEAD:notificationjs.js
 notficationJS_getDefaultsStyle = function(){
     return {
         "maxWidth":"375px",
@@ -37,7 +36,7 @@ notficationJS_getDefaultsStyle = function(){
         "border":"none",
         "padding":"10px 15px",
         "borderRadius":"5px",
-        "boxShadow":"0px 1px 9px 4px #242424;",
+        "boxShadow":"0px 1px 9px 4px #242424",
         "marginTop":"15px",
         "width":"calc(100vw - 80px)"
     }
@@ -55,26 +54,10 @@ notficationJS_getDefaults = function(){
 }
 newNotification = function(notification_user){
     if(!notification_user){
-=======
-notficationJS_getDefaults = function() {
-    return {
-        "status": "info",
-        "time": 5,
-        "hide": true,
-        "animation_duration": 0.2,
-        "showCloseIcon": true,
-        "newestOnTop": true,
-        "debug": true
-    }
-}
-newNotification = function(notification) {
-    if (!notification) {
->>>>>>> 598053cd3c7a24b8b7a348107e98d5847492121b:notificationJS.js
         console.error("NotificationJS: You need to set a map with at least a title property like this: ")
         console.error("NotificationJS: newNotification({\"title\":\"Your title goes here.\"})")
         return 0
     }
-<<<<<<< HEAD:notificationjs.js
     checkErrors(notification_user)
     
     let notificationStyle = $.extend({},notficationJS_getDefaultsStyle(),notification_user.style)
@@ -92,14 +75,6 @@ newNotification = function(notification) {
         "boxShadow":notificationStyle.boxShadow,
         "marginTop":notificationStyle.marginTop
     })
-=======
-    console.log(2)
-    checkErrors(notification)
-    notification = $.extend({}, notficationJS_getDefaults(), notification)
-    console.log(notification)
-    let div_father = $(`<div class="notification-panel__item notification__${notification.status}"></div>`)
-
->>>>>>> 598053cd3c7a24b8b7a348107e98d5847492121b:notificationJS.js
 
     //left part
     let div_left = $('<div class="notification-left"></div>')

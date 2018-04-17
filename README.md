@@ -65,7 +65,7 @@ newNotification({
       "border":"none",                             
       "padding":"10px 15px",                         
       "borderRadius":"5px",                        
-      "boxShadow":"0px 1px 9px 4px #242424;",                          
+      "boxShadow":"0px 1px 9px 4px #242424",                          
       "marginTop":"15px",                         
     } 
 })
