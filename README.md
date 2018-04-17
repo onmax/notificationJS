@@ -26,7 +26,7 @@ newNotification({
 ```
 
 #### time
-how long your notification will last?<br />
+How long your notification will last?<br />
 Values: Positives integers or doubles
 
 
