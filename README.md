@@ -21,7 +21,8 @@ newNotification({
     "time":5,                                                   //Optional. In seconds. 5 seconds by default.
     "hide":true,                                                //Optional. True by default
     "animation_duration":0.2,                                   //Optional. 0.2 seconds by default
-    "showCloseIcon": false                                      //Optional. True by default
+    "showCloseIcon": false,                                     //Optional. True by default
+    "debug": true                                               //Optional. True by default
 })
 ```
 
@@ -37,3 +38,8 @@ Values: [ true | false ]
 #### showCloseIcon
 Will your notification close? <br />
 Values: [ true | false ]
+
+#### debug
+Do you want to see logs, errors, info in the console of the browser? <br />
+Values: [ true | false ]
+

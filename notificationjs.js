@@ -1,7 +1,11 @@
 checkErrors = function (notification){
+    if(notification.debug == undefined)
+        notification.debug = true
     if (!window.jQuery) {
-        console.info("NotificationJS: needs jQuery in order to work. It has been automatic loaded.")
-        console.info("You can import it here: http://code.jquery.com/jquery-latest.min.js")
+        if(notification.debug){
+            console.info("NotificationJS: needs jQuery in order to work. It has been automatic loaded.")
+            console.info("You can import it here: http://code.jquery.com/jquery-latest.min.js")
+        }
         var jQuery = document.createElement('script');
         jQuery.src = "http://code.jquery.com/jquery-latest.min.js";
         document.getElementsByTagName('body')[0].appendChild(jQuery);
@@ -14,12 +18,16 @@ checkErrors = function (notification){
 
     if(notification.title == undefined){
         notification.title = 'TITLE UNDEFINED'
-        console.error("NotificationJS: You need to set a title.")
+        if(notification.debug){
+            console.error("NotificationJS: You need to set a title.")
+        }
     }
 
     if(notification.link != undefined){
         if(notification.link.href == undefined)
-            console.error("NotificationJS: You need to set a link with href property")
+            if(notification.debug){
+                console.error("NotificationJS: You need to set a link with href property")
+            }
     }
     if(notification.hide == undefined)
         notification.hide = true
@@ -37,8 +45,10 @@ checkErrors = function (notification){
 }
 newNotification = function(notification){
     if(notification == undefined){
-        console.error("NotificationJS: You need to set a dictionary with at least a title property like this: ")
-        console.error("NotificationJS: newNotification({\"title\":\"Your title goes here.\"})")
+        if(notification.debug){
+            console.error("NotificationJS: You need to set a dictionary with at least a title property like this: ")
+            console.error("NotificationJS: newNotification({\"title\":\"Your title goes here.\"})")
+        }
         return 0
     }
     notification = checkErrors(notification)
