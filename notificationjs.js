@@ -1,17 +1,12 @@
 function init(){
     if (!window.jQuery) {
-        if(notification.debug){
-            console.warn("NotificationJS: needs jQuery in order to work. It has been automatic loaded.")
-            console.warn("You can import it here: https://code.jquery.com/jquery-latest.min.js")
-        }
         var jQuery = document.createElement('script');
-
         jQuery.src = "https://code.jquery.com/jquery-latest.min.js";
         document.head.appendChild(jQuery);
-
-        return 0
     }
 }
+
+window.onload = init();
 
 checkErrors = function (notification){
     if(!notification.debug)
