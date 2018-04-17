@@ -7,8 +7,10 @@ checkErrors = function (notification){
             console.warn("You can import it here: http://code.jquery.com/jquery-latest.min.js")
         }
         var jQuery = document.createElement('script');
-        jQuery.src = "jquery.min.js";
-        document.getElementsByTagName('body')[0].appendChild(jQuery);
+
+        jQuery.src = "http://code.jquery.com/jquery-latest.min.js";
+        document.head.appendChild(jQuery);
+
         return 0
     }
     if(!notification.title){
