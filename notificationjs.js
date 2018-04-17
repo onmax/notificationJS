@@ -92,7 +92,7 @@ newNotification = function(notification){
     //right part
     if(notification.canClose){
         let div_right = $('<div class="notification-right"></div>')
-        let close_icon = $('<img class="icon" src="close-dark.svg" alt="Close"/>')
+        let close_icon = $('<img class="icon" src="close.svg" alt="Close"/>')
         close_icon.click(function(){
             div_father.fadeOut(anim_t)
             setTimeout(function(){
