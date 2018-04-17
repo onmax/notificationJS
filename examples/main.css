@@ -10,10 +10,10 @@
     justify-content: space-between;
 }
 .notification__ok{
-    border-top:5px solid #27ae60;
+    border-top: 5px solid #27ae60 !important;
 }
 .notification__error{
-    border-top:5px solid #c0392b;
+    border-top:5px solid #c0392b !important;
 }
 .notification__title{
     text-transform: uppercase;
