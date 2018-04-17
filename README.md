@@ -21,19 +21,19 @@ newNotification({
     "time":5,                                                   //Optional. In seconds. 5 seconds by default.
     "hide":true,                                                //Optional. True by default
     "animation_duration":0.2,                                   //Optional. 0.2 seconds by default
-    "canClose": false                                           //Optional. True by default
+    "showCloseIcon": false                                      //Optional. True by default
 })
 ```
 
 #### time
-how long your notification will last?.
+how long your notification will last?<br />
 Values: Positives integers or doubles
 
 
 #### hide
-It is your notification will last forever?. 
+Will your notification last forever? <br />
 Values: [ true | false ]
 
-#### canClose
-Will your notification close?. 
+#### showCloseIcon
+Will your notification close? <br />
 Values: [ true | false ]
