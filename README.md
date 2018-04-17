@@ -22,6 +22,7 @@ newNotification({
     "hide":true,                                                //Optional. True by default
     "animation_duration":0.2,                                   //Optional. 0.2 seconds by default
     "showCloseIcon": false,                                     //Optional. True by default
+    "newestOnTop": true,                                        //Optional. True by default
     "debug": true                                               //Optional. True by default
 })
 ```

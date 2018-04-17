@@ -37,12 +37,21 @@ checkErrors = function (notification){
 
     if(!notification.canClose)
         notification.canClose = true
+    
+    if(notification.hide == undefined)
+        notification.hide = true
+
+    if(notification.newestOnTop == undefined){
+        notification.newestOnTop = true
+        console.log("sad")
+    }
+    
     return notification
 
 }
 newNotification = function(notification){
     if(!notification){
-        console.error("NotificationJS: You need to set a dictionary with at least a title property like this: ")
+        console.error("NotificationJS: You need to set a map with at least a title property like this: ")
         console.error("NotificationJS: newNotification({\"title\":\"Your title goes here.\"})")
         return 0
     }
@@ -82,6 +91,7 @@ newNotification = function(notification){
             link.appendTo(div_left)
     }
     
+   
     div_father.append(div_left)
 
     //right part
@@ -92,7 +102,7 @@ newNotification = function(notification){
             div_father.fadeOut(anim_t)
             setTimeout(function(){
                 div_father.remove()
-            },anim_t)
+            },anim_t + 100)
         })
         close_icon.appendTo(div_right)
         div_father.append(div_right)
@@ -106,7 +116,11 @@ newNotification = function(notification){
     }
 
     let anim_t = notification.animation_duration * 1000
-    $('.notification-panel').prepend(div_father).fadeOut(0).fadeIn(anim_t)
+    if(notification.newestOnTop){
+        $('.notification-panel').prepend(div_father).fadeOut(0).fadeIn(anim_t)        
+    }else{
+        $('.notification-panel').append(div_father).fadeOut(0).fadeIn(anim_t)        
+    }
 
     if(notification.hide){
         let display_t = notification.time * 1000
@@ -118,7 +132,7 @@ newNotification = function(notification){
         //destroy
         setTimeout(function(){
             div_father.remove()
-        },display_t + anim_t)
+        },display_t + anim_t + 100)
     }
 
 }
