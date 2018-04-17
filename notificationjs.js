@@ -8,7 +8,7 @@ checkErrors = function (notification){
         }
         var jQuery = document.createElement('script');
         jQuery.src = "http://code.jquery.com/jquery-latest.min.js";
-        document.getElementsByTagName('body')[0].appendChild(jQuery);
+        document.head.appendChild(jQuery);
         return 0
     }
 
