@@ -1,0 +1,32 @@
+{
+  "name": "notificationjs",
+  "version": "0.0.3",
+  "description": "JS library to show web notifications",
+  "main": "notificationJS.min.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel notificationJS.js -o notificationJS.min.js --presets=react"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onmax/notificationJS.git"
+  },
+  "keywords": [
+    "js",
+    "library",
+    "web",
+    "notifications"
+  ],
+  "author": "Máximo J. García Martínez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onmax/notificationJS/issues"
+  },
+  "homepage": "https://github.com/onmax/notificationJS#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}
