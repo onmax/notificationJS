@@ -21,11 +21,7 @@
     "notifications",
     "jquery"
   ],
-  "author": {
-    "name": "Máximo J. García Martínez",
-    "email":"maximogarciamtnez@gmail.com"
-  },
-  contributors: "Alberto M",
+  contributors: "Máximo J. García Martínez, Alberto M",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/onmax/notificationJS/issues"
