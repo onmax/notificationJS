@@ -1,3 +1,5 @@
+[![](https://data.jsdelivr.com/v1/package/gh/onmax/notificationJS/badge)](https://www.jsdelivr.com/package/gh/onmax/notificationJS)
+
 # notificationJS
 1º Import JS script <br /> 
 ```
