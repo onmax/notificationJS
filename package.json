@@ -7,8 +7,8 @@
     "example": "examples"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx babel notificationJS.js -o notificationJS.min.js --presets=react"
+    "test": "echo \"To test it, please open index.html on your browser\"",
+    "build": "babel notificationJS.js -o notificationJS.min.js --presets=react,minify"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/onmax/notificationJS#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-minify": "^0.4.0",
+    "babel-preset-react": "^6.24.1"
   }
 }
