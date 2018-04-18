@@ -25,9 +25,7 @@
     "name": "Máximo J. García Martínez",
     "email":"maximogarciamtnez@gmail.com"
   },
-  "author": {
-    "name": "Alberto"
-  }
+  contributors: "Alberto M",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/onmax/notificationJS/issues"
