@@ -1,7 +1,7 @@
 # notificationJS
 1º Import JS script <br /> 
 ```
-<script src="https://cdn.jsdelivr.net/gh/onmax/notificationJS/notificationJS.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/onmax/notificationJS@latest/notificationJS.min.js"></script>
 ```
 2º You can try with: <br />
 ```
