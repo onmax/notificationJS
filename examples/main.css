@@ -4,17 +4,6 @@
     right: 25px;
 }
 
-.notification-panel__item{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.notification__ok{
-    border-top: 5px solid #27ae60 !important;
-}
-.notification__error{
-    border-top:5px solid #c0392b !important;
-}
 .notification__title{
     text-transform: uppercase;
     font-size: 14px;

@@ -62,7 +62,6 @@ newNotification = function(notification_user){
     
     let notificationStyle = $.extend({},notficationJS_getDefaultsStyle(),notification_user.style)
     let notification = $.extend({},notficationJS_getDefaults(),notification_user)
-    console.log(notificationStyle)
     let div_father = $(`<div class="notification-panel__item notification__${notification.status}"></div>`)
 
     div_father.css({
@@ -74,8 +73,15 @@ newNotification = function(notification_user){
         padding:notificationStyle.padding,
         borderRadius:notificationStyle.borderRadius,
         boxShadow:notificationStyle.boxShadow,
-        marginTop:notificationStyle.marginTop
+        marginTop:notificationStyle.marginTop,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between"
     })
+    if(notification.status == "error")
+        div_father.css("borderTop","5px solid #c0392b")
+    if(notification.status == "ok")
+        div_father.css("borderTop","5px solid #27ae60")
 
     //left part
     let div_left = $('<div class="notification-left"></div>')
