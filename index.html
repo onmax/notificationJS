@@ -36,10 +36,22 @@
         font-weight: bold;
         cursor: pointer;
     }
+    .close-icon div{
+        
+    }
+    .close-icon div:nth-child(1){
+    }
+    .close-icon div:nth-child(2){
+        transform: rotate(-45deg);
+    }
     </style>
     <link rel="stylesheet" href="examples/main.css">
 </head>
 <body>
+    <div class="close-icon">
+        <div></div>
+        <div></div>
+    </div>
     <h1>Example of NotificationJS</h1>
     <div class="buttons">
         <button onClick="showInfoNotification()" class="info">INFO</button>

@@ -25,10 +25,10 @@ newNotification({
     time:5,                                                   //Optional. In seconds. 5 seconds by default.
     hide:true,                                                //Optional. True by default
     animation_duration:0.2,                                   //Optional. 0.2 seconds by default
-    showCloseIcon: false,                                     //Optional. True by default
+    showCloseIcon: true,                                      //Optional. True by default
     newestOnTop: true,                                        //Optional. True by default
     debug: true                                               //Optional. True by default,
-    styles: ...                                                //Map of different styles you can apply. Explain below.
+    styles: ...                                               //Map of different styles you can apply. Explain below.
 })
 ```
 
@@ -107,6 +107,19 @@ newNotification({
       textAlign: "",
       background: "",
       color: "inherit"
+    },
+    closeIconStyles:{
+      position: "absolute",
+      height: "3px",
+      width: "15px",
+      background: "#242424",
+      borderRadius: "3px",
+      margin: "",
+      padding: "",
+      right: "10px",
+      left: "",
+      top: "",
+      bottom: ""
     }    
 })
 ```

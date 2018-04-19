@@ -98,6 +98,21 @@ notficationJS_getDefaultsStylesLink = function(){
     }
 }
 
+notficationJS_getDefaultsStylesCloseIcon = function(){
+    return({
+        position: "absolute",
+        height: "3px",
+        width: "15px",
+        background: "#242424",
+        borderRadius: "3px",
+        margin: "",
+        padding: "",
+        right: "10px",
+        left: "",
+        top: "",
+        bottom: ""
+    })
+}
 
 
 newNotification = function(notification_user){
@@ -166,7 +181,14 @@ newNotification = function(notification_user){
     //right part
     if (notification.showCloseIcon) {
         let div_right = $('<div class="notification-right"></div>')
-        let close_icon = $('<img class="notification_icon" src="examples/close.svg" alt="Close"/>')
+        let close_icon_css = $.extend({},notficationJS_getDefaultsStylesCloseIcon(),notification_user.closeIconStyles)
+        let close_icon = $('<div></div>')
+        let close_icon_bar1 = $('<div></div>').css(close_icon_css)
+        let close_icon_bar2 = $('<div></div>').css(close_icon_css)
+        close_icon
+            .append(close_icon_bar1.css("transform","rotate(45deg)"))
+            .append(close_icon_bar2.css("transform","rotate(-45deg)"))
+
         close_icon.click(function() {
             div_father.fadeOut(anim_t)
             setTimeout(function() {
@@ -174,6 +196,10 @@ newNotification = function(notification_user){
             }, anim_t + 100)
         })
         close_icon.appendTo(div_right)
+        div_right.css({
+            "margin": "0 0 0 15px",
+            "cursor": "pointer"
+        })
         div_father.append(div_right)
     }
 
