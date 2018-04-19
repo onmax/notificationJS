@@ -8,7 +8,7 @@
 2º You can try with: <br />
 ```
   newNotification({
-    "title":"NotificationJS test!"
+    title:"NotificationJS test!"
   })
 ```
 
