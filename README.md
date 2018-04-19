@@ -19,8 +19,8 @@ newNotification({
     status:["info" | "error" | "ok" ],                        //Optional. Info by default.
     description:"Small description about the notification",   //Optional. None by default.    
     link:{                                                    //Optional. None by default.
-        "href":"http://google.es",                              //Mandatory if you use link parameter. None by default. 
-        "text":"I'm a link"                                     //Optional. href link by default.
+        href:"http://google.es",                              //Mandatory if you use link parameter. None by default. 
+        text:"I'm a link"                                     //Optional. href link by default.
     },
     time:5,                                                   //Optional. In seconds. 5 seconds by default.
     hide:true,                                                //Optional. True by default
