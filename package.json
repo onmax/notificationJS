@@ -1,6 +1,6 @@
 {
   "name": "notificationjs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "JS library to show web notifications",
   "main": "notificationJS.min.js",
   "directories": {
