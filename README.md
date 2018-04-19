@@ -28,7 +28,7 @@ newNotification({
     showCloseIcon: false,                                     //Optional. True by default
     newestOnTop: true,                                        //Optional. True by default
     debug: true                                               //Optional. True by default,
-    style: ...                                                //Map of different styles you can apply. Explain below.
+    styles: ...                                                //Map of different styles you can apply. Explain below.
 })
 ```
 
@@ -58,7 +58,7 @@ In the example below, CSS values are the defaults ones.
 newNotification({
     title:"Let's try CSS!",
     description:"NotificationJS is amazing",
-    style:{
+    styles:{
       maxWidth:"375px",                          //Width of the notification      
       width:"calc(100vw - 80px)",                //This is just for mobile responsive                   
       backgroundColor:"#F1F5F6",                
@@ -67,8 +67,47 @@ newNotification({
       padding:"10px 15px",                         
       borderRadius:"5px",                        
       boxShadow:"0px 1px 9px 4px #242424",                          
-      marginTop:"15px",                         
-    } 
+      marginTop:"15px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between"                       
+    },
+    titleStyles:{
+      fontSize: "",
+      fontWeight: "600",
+      margin: "",
+      padding: "",
+      width: "",
+      textDecoration: "none",
+      textTransform: "",
+      textAlign: "",
+      background: "",
+      color: "inherit"
+    },
+    descriptionStyles:{
+      fontSize: "14px",
+      fontWeight: "",
+      margin: "5px 0 0 0",
+      padding: "0 0 0 0",
+      width: "",
+      textDecoration: "",
+      textTransform: "",
+      textAlign: "",
+      background: "",
+      color: ""
+    },
+    linkStyles:{
+      fontSize: "",
+      fontWeight: "600",
+      margin: "",
+      padding: "",
+      width: "",
+      textDecoration: "none",
+      textTransform: "",
+      textAlign: "",
+      background: "",
+      color: "inherit"
+    }    
 })
 ```
 

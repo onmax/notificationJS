@@ -1,7 +1,7 @@
 if (!window.jQuery) {
-    var jQuery = document.createElement('script');
-    jQuery.src = "https://code.jquery.com/jquery-latest.min.js";
-    document.head.appendChild(jQuery);
+    var jQuery = document.createElement('script')
+    jQuery.src = "https://code.jquery.com/jquery-latest.min.js"
+    document.head.appendChild(jQuery)
 }
 
 
@@ -28,19 +28,6 @@ checkErrors = function(notification) {
     return notification
 
 }
-notficationJS_getDefaultsStyle = function(){
-    return {
-        maxWidth:"375px",
-        backgroundColor:"#F1F5F6",
-        color:"#242424",
-        border:"none",
-        padding:"10px 15px",
-        borderRadius:"5px",
-        boxShadow:"0px 1px 9px 4px #242424",
-        marginTop:"15px",
-        width:"calc(100vw - 80px)"
-    }
-}
 notficationJS_getDefaults = function(){
     return {                   
         status:"info",   
@@ -52,6 +39,67 @@ notficationJS_getDefaults = function(){
         debug: true                                    
     }
 }
+notficationJS_getDefaultsStyles = function(){
+    return {
+        maxWidth:"375px",
+        backgroundColor:"#F1F5F6",
+        color:"#242424",
+        border:"none",
+        padding:"10px 15px",
+        borderRadius:"5px",
+        boxShadow:"0px 1px 9px 4px #242424",
+        marginTop:"15px",
+        width:"calc(100vw - 80px)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between"
+    }
+}
+notficationJS_getDefaultsStylesTitle = function(){
+    return {
+        fontSize: "14px",
+        fontWeight: "600",
+        margin: "",
+        padding: "",
+        width: "",
+        textDecoration: "",
+        textTransform: "uppercase",
+        textAlign: "",
+        background: "",
+        color: ""
+    }
+}
+notficationJS_getDefaultsStylesDescription = function(){
+    return {
+        fontSize: "14px",
+        fontWeight: "",
+        margin: "5px 0 0 0",
+        padding: "0 0 0 0",
+        width: "",
+        textDecoration: "",
+        textTransform: "",
+        textAlign: "",
+        background: "",
+        color: ""
+    }
+}
+notficationJS_getDefaultsStylesLink = function(){
+    return {
+        fontSize: "",
+        fontWeight: "600",
+        margin: "",
+        padding: "",
+        width: "",
+        textDecoration: "none",
+        textTransform: "",
+        textAlign: "",
+        background: "",
+        color: "inherit"
+    }
+}
+
+
+
 newNotification = function(notification_user){
     if(!notification_user){
         console.error("NotificationJS: You need to set a map with at least a title property like this: ")
@@ -60,24 +108,12 @@ newNotification = function(notification_user){
     }
     checkErrors(notification_user)
     
-    let notificationStyle = $.extend({},notficationJS_getDefaultsStyle(),notification_user.style)
+    let notificationStyles = $.extend({},notficationJS_getDefaultsStyles(),notification_user.styles)
     let notification = $.extend({},notficationJS_getDefaults(),notification_user)
     let div_father = $(`<div class="notification-panel__item notification__${notification.status}"></div>`)
 
-    div_father.css({
-        maxWidth:notificationStyle.maxWidth,
-        width:notificationStyle.width,
-        backgroundColor:notificationStyle.backgroundColor,
-        color:notificationStyle.color,
-        border:notificationStyle.border,
-        padding:notificationStyle.padding,
-        borderRadius:notificationStyle.borderRadius,
-        boxShadow:notificationStyle.boxShadow,
-        marginTop:notificationStyle.marginTop,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between"
-    })
+    div_father.css(notificationStyles)
+
     if(notification.status == "error")
         div_father.css("borderTop","5px solid #c0392b")
     if(notification.status == "ok")
@@ -86,7 +122,10 @@ newNotification = function(notification_user){
     //left part
     let div_left = $('<div class="notification-left"></div>')
     let div_title = $(`<div class="notification__title">${notification.title}</div>`)
+    let notificationStylesTitle = $.extend({},notficationJS_getDefaultsStylesTitle(),notification_user.titleStyles)
+    div_title.css(notificationStylesTitle)
     div_title.appendTo(div_left)
+
 
     let link = null
     if (notification.link) {
@@ -104,13 +143,16 @@ newNotification = function(notification_user){
     if (notification.description) {
         let description
         if (link != null) {
+            let notificationStylesLink = $.extend({},notficationJS_getDefaultsStylesLink(),notification_user.linkStyles)
+            link.css(notificationStylesLink)
             description = $(`<div class="notification__description">${notification.description} </div>`)
             link.appendTo(description)
         }
         else {
             description = $(`<div class="notification__description">${notification.description}</div>`)
         }
-
+        let notificationStylesDescription = $.extend({},notficationJS_getDefaultsStylesDescription(),notification_user.descriptionStyles)
+        description.css(notificationStylesDescription)
         description.appendTo(div_left)
     }
     else {

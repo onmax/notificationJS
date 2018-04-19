@@ -4,19 +4,6 @@
     right: 25px;
 }
 
-.notification__title{
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.notification__description{
-    font-size: 14px;
-    margin-top: 5px;
-}
-.notification__link{
-    font-weight: 600;
-}
 
 .notification-right{
     margin-left: 15px;
