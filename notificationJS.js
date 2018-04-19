@@ -30,26 +30,26 @@ checkErrors = function(notification) {
 }
 notficationJS_getDefaultsStyle = function(){
     return {
-        "maxWidth":"375px",
-        "backgroundColor":"#F1F5F6",
-        "color":"#242424",
-        "border":"none",
-        "padding":"10px 15px",
-        "borderRadius":"5px",
-        "boxShadow":"0px 1px 9px 4px #242424",
-        "marginTop":"15px",
-        "width":"calc(100vw - 80px)"
+        maxWidth:"375px",
+        backgroundColor:"#F1F5F6",
+        color:"#242424",
+        border:"none",
+        padding:"10px 15px",
+        borderRadius:"5px",
+        boxShadow:"0px 1px 9px 4px #242424",
+        marginTop:"15px",
+        width:"calc(100vw - 80px)"
     }
 }
 notficationJS_getDefaults = function(){
     return {                   
-        "status":"info",   
-        "time":5,                                                 
-        "hide":true,                                                
-        "animation_duration":0.2,                                   
-        "showCloseIcon": true,                                     
-        "newestOnTop": true,                                       
-        "debug": true                                    
+        status:"info",   
+        time:5,                                                 
+        hide:true,                                                
+        animation_duration:0.2,                                   
+        showCloseIcon: true,                                     
+        newestOnTop: true,                                       
+        debug: true                                    
     }
 }
 newNotification = function(notification_user){
@@ -66,15 +66,15 @@ newNotification = function(notification_user){
     let div_father = $(`<div class="notification-panel__item notification__${notification.status}"></div>`)
 
     div_father.css({
-        "maxWidth":notificationStyle.maxWidth,
-        "width":notificationStyle.width,
-        "backgroundColor":notificationStyle.backgroundColor,
-        "color":notificationStyle.color,
-        "border":notificationStyle.border,
-        "padding":notificationStyle.padding,
-        "borderRadius":notificationStyle.borderRadius,
-        "boxShadow":notificationStyle.boxShadow,
-        "marginTop":notificationStyle.marginTop
+        maxWidth:notificationStyle.maxWidth,
+        width:notificationStyle.width,
+        backgroundColor:notificationStyle.backgroundColor,
+        color:notificationStyle.color,
+        border:notificationStyle.border,
+        padding:notificationStyle.padding,
+        borderRadius:notificationStyle.borderRadius,
+        boxShadow:notificationStyle.boxShadow,
+        marginTop:notificationStyle.marginTop
     })
 
     //left part
