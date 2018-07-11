@@ -23,11 +23,11 @@ newNotification({
         text:"I'm a link"                                     //Optional. href link by default.
     },
     time:5,                                                   //Optional. In seconds. 5 seconds by default.
-    hide:true,                                                //Optional. True by default
-    animation_duration:0.2,                                   //Optional. 0.2 seconds by default
-    showCloseIcon: true,                                      //Optional. True by default
-    newestOnTop: true,                                        //Optional. True by default
-    debug: true                                               //Optional. True by default,
+    hide:true,                                                //Optional. True by default.
+    animation_duration:0.2,                                   //Optional. 0.2 seconds by default.
+    showCloseIcon: true,                                      //Optional. True by default.
+    newestOnTop: true,                                        //Optional. True by default.
+    debug: true,                                               //Optional. True by default.
     styles: ...                                               //Map of different styles you can apply. Explain below.
 })
 ```
