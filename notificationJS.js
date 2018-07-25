@@ -141,7 +141,7 @@ class NotificationJS {
         return {
             status: 'info',
             time: 5,
-            hide: false,
+            hide: true,
             animation_duration: 0.2,
             showCloseIcon: true,
             newestOnTop: true,
