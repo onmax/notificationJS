@@ -66,22 +66,21 @@
     <script src="notificationJS.js"></script>
     <script>
         showInfoNotification = function () {
-            newNotification({
+            new NotificationJS({
                 "title": "This is just info",
                 "status": "info",
                 "description": "Small description about the notification",
             })
         }
         showOkNotification = function () {
-            newNotification({
+            new NotificationJS({
                 "title": "Everything is OK!!!",
                 "status": "ok",
                 "description": "NotificationJS is awesome",
-                "hide": false
             })
         }
         showErrorNotification = function () {
-            newNotification({
+            new NotificationJS({
                 "title": "Oh no :(",
                 "status": "error",
                 "description": "Something went wrong"
