@@ -1,6 +1,6 @@
 {
   "name": "notificationjs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "JS library to show web notifications",
   "main": "notificationJS.min.js",
   "directories": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"To test it, please open index.html on your browser\"",
-    "build": "babel notificationJS.js -o notificationJS.min.js --presets=react,minify"
+    "build": "babel notificationJS.js -o notificationJS.min.js --presets=stage-3,minify"
   },
   "repository": {
     "type": "git",
@@ -21,12 +21,14 @@
     "notifications",
     "jquery"
   ],
-  "author": { 
-    "name" : "Máximo J. García Martínez",
-    "email" : "maximogarciamtnez@gmail.com",
-    "url" : "https://github.com/onmax/"
+  "author": {
+    "name": "Máximo J. García Martínez",
+    "email": "maximogarciamtnez@gmail.com",
+    "url": "https://github.com/onmax/"
   },
-  "contributors": ["Alberto Monterroso"],
+  "contributors": [
+    "Alberto Monterroso"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/onmax/notificationJS/issues"
@@ -35,6 +37,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-minify": "^0.4.0",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1"
   }
 }
