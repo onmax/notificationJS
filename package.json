@@ -18,8 +18,7 @@
     "js",
     "library",
     "web",
-    "notifications",
-    "jquery"
+    "notifications"
   ],
   "author": {
     "name": "Máximo J. García Martínez",
