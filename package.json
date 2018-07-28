@@ -1,0 +1,41 @@
+{
+  "name": "notificationjs",
+  "version": "0.0.5",
+  "description": "JS library to show web notifications",
+  "main": "notificationJS.min.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"To test it, please open index.html on your browser\"",
+    "build": "npx google-closure-compiler --js=notificationJS.js --js_output_file=notificationJS.min.js --language_in=ECMASCRIPT_2018"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onmax/notificationJS.git"
+  },
+  "keywords": [
+    "js",
+    "library",
+    "web",
+    "notifications",
+    "jquery"
+  ],
+  "author": {
+    "name": "Máximo J. García Martínez",
+    "email": "maximogarciamtnez@gmail.com",
+    "url": "https://github.com/onmax/"
+  },
+  "contributors": [
+    "Alberto Monterroso"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onmax/notificationJS/issues"
+  },
+  "homepage": "https://github.com/onmax/notificationJS#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "google-closure-compiler": "^20180716.0.1"
+  }
+}
