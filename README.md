@@ -11,7 +11,7 @@
 2º You can try with: <br />
 
 ```
-  newNotification({
+  new NotificationJS({
     title:"NotificationJS test!"
   })
 ```
@@ -19,7 +19,7 @@
 ## You can add more parameters
 
 ```
-newNotification({
+new NotificationJS({
     title:"Another NotificationJS test!",                     //Mandatory
     status:["info" | "error" | "ok" ],                        //Optional. Info by default.
     description:"Small description about the notification",   //Optional. None by default.
@@ -59,9 +59,9 @@ Values: [ true | false ]
 
 ### Styles
 
-All options below are optional, and you can apply CSS values. If it is a color, you can write: HSV,rgb or hexadecimal code. Or if it is distances, you can use: px,em,rem,%... <br />
-You may also apply your CSS variables if you have declared it in the root selector.<br />
-In the example below, CSS values are the defaults ones.
+You can add your own CSS property for each element in the notification. You can use it like normal CSS in JS<br />
+All options below are the default ones, and you can apply CSS values. If it is a color, you can write: HSV,rgb or hexadecimal code. Or if it is distances, you can use: px,em,rem,%... <br />
+You may also apply your CSS variables if you have declared it in the root selector or anywhere else.<br />
 
 ```
 newNotification({
@@ -82,40 +82,18 @@ newNotification({
       justifyContent: "space-between"
     },
     titleStyles:{
-      fontSize: "",
       fontWeight: "600",
-      margin: "",
-      padding: "",
-      width: "",
       textDecoration: "none",
-      textTransform: "",
-      textAlign: "",
-      background: "",
       color: "inherit"
     },
     descriptionStyles:{
       fontSize: "14px",
-      fontWeight: "",
       margin: "5px 0 0 0",
       padding: "0 0 0 0",
-      width: "",
-      textDecoration: "",
-      textTransform: "",
-      textAlign: "",
-      background: "",
-      color: ""
     },
     linkStyles:{
-      fontSize: "",
       fontWeight: "600",
-      margin: "",
-      padding: "",
-      width: "",
       textDecoration: "none",
-      textTransform: "",
-      textAlign: "",
-      background: "",
-      color: "inherit"
     },
     closeIconStyles:{
       position: "absolute",
@@ -123,12 +101,7 @@ newNotification({
       width: "15px",
       background: "#242424",
       borderRadius: "3px",
-      margin: "",
-      padding: "",
       right: "10px",
-      left: "",
-      top: "",
-      bottom: ""
     }
 })
 ```
