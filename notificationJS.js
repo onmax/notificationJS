@@ -158,7 +158,7 @@ class NotificationJS {
                 border: 'none',
                 padding: '10px 15px',
                 borderRadius: '5px',
-                boxShadow: '0px 1px 9px 4px #242424',
+                boxShadow: 'rgba(36, 36, 36, 0.23) 0px 1px 9px 4px',
                 marginTop: '15px',
                 width: 'calc(100vw - 80px)',
                 display: 'flex',
