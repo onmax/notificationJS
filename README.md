@@ -4,13 +4,13 @@
 
 1º Import JS script <br />
 
-```
+```html
 <script src="https://cdn.jsdelivr.net/gh/onmax/notificationJS@latest/notificationJS.min.js"></script>
 ```
 
 2º You can try with: <br />
 
-```
+```js
   new NotificationJS({
     title:"NotificationJS test!"
   })
@@ -18,7 +18,7 @@
 
 ## You can add more parameters
 
-```
+```js
 new NotificationJS({
     title:"Another NotificationJS test!",                     //Mandatory
     status:["info" | "error" | "ok" ],                        //Optional. Info by default.
@@ -63,7 +63,7 @@ You can add your own CSS property for each element in the notification. You can 
 All options below are the default ones, and you can apply CSS values. If it is a color, you can write: HSV,rgb or hexadecimal code. Or if it is distances, you can use: px,em,rem,%... <br />
 You may also apply your CSS variables if you have declared it in the root selector or anywhere else.<br />
 
-```
+```js
 newNotification({
     title:"Let's try CSS!",
     description:"NotificationJS is amazing",
